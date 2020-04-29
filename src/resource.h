@@ -16,3 +16,12 @@
 #define IDC_VARIABLE_VALUE                      702
 #define IDS_VARIABLE                            40000
 #define IDS_VALUE                               40001
+#define IDC_ENVVAR_EDIT_PATH                    40002
+#define IDC_ENVVAR_EDIT_DIR                     40003
+#define IDC_ENVVAR_EDIT_LIST                    40004
+#define IDC_ENVVAR_EDIT_UP                      40005
+#define IDC_ENVVAR_EDIT_DOWN                    40006
+#define IDC_ENVVAR_EDIT_ADD                     40007
+#define IDC_ENVVAR_EDIT_SET                     40008
+#define IDC_ENVVAR_EDIT_DEL                     40009
+#define IDC_ENVVAR_EDIT_DIV                     40010
