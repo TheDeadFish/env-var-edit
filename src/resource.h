@@ -6,14 +6,14 @@
 #define IDS_VALUE       67
 
 #define IDD_ENVIRONMENT_VARIABLES               600
-#define IDC_USER_VARIABLE_LIST                  601
-#define IDC_USER_VARIABLE_NEW                   602
-#define IDC_USER_VARIABLE_EDIT                  603
-#define IDC_USER_VARIABLE_DELETE                604
-#define IDC_SYSTEM_VARIABLE_LIST                605
-#define IDC_SYSTEM_VARIABLE_NEW                 606
-#define IDC_SYSTEM_VARIABLE_EDIT                607
-#define IDC_SYSTEM_VARIABLE_DELETE              608
+#define IDC_USER_VARIABLE_LIST                  402
+#define IDC_USER_VARIABLE_NEW                   412
+#define IDC_USER_VARIABLE_EDIT                  413
+#define IDC_USER_VARIABLE_DELETE                414
+#define IDC_SYSTEM_VARIABLE_LIST                400
+#define IDC_SYSTEM_VARIABLE_NEW                 407
+#define IDC_SYSTEM_VARIABLE_EDIT                408
+#define IDC_SYSTEM_VARIABLE_DELETE              409
 #define IDD_EDIT_VARIABLE                       700
 #define IDC_VARIABLE_NAME                       701
 #define IDC_VARIABLE_VALUE                      702
