@@ -682,7 +682,7 @@ OnNotify(HWND hwndDlg, NMHDR *phdr)
 
 /* Environment dialog procedure */
 INT_PTR CALLBACK
-EnvironmentDlgProc(HWND hwndDlg,
+EnvVarsDlgProc(HWND hwndDlg,
                    UINT uMsg,
                    WPARAM wParam,
                    LPARAM lParam)
