@@ -1,7 +1,7 @@
 project(env-var)
 cmake_minimum_required(VERSION 3.12)
 set( EXECUTABLE_OUTPUT_PATH ../bin)
-#set(CMAKE_CXX_FLAGS_RELEASE "-s -Wl,-gc-sections -mwindows")
+add_link_options(-s -Wl,-gc-sections -mwindows)
 set(CMAKE_RC_FLAGS "--codepage=65001")
 
 add_executable(envvar 
