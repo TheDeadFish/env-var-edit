@@ -1,6 +1,7 @@
 #include "stdshit.h"
 #include "resize.h"
 #include <commctrl.h>
+#include "resource.h"
 
 const char progName[] = "sysdm.cpl";
 
@@ -48,4 +49,33 @@ extern "C" int __stdcall EnvVarsDlgProc_hook(HWND hDlg,
 	ARGFIX(wParam); ARGFIX(lParam);	
 	return EnvVarsDlgProc(hDlg,
 		uMsg, wParam, lParam);
+}
+
+
+static WndResize resize2;
+const WndResize::CtrlDef crtlLst2[] = { 
+	{IDC_VARIABLE_NAME, HOR_BOTH}, {IDC_VARIABLE_VALUE, HOR_BOTH},
+	{IDC_ENVVAR_EDIT_PATH, HOR_BOTH}, {IDC_ENVVAR_EDIT_DIV, HOR_BOTH},
+	{IDC_ENVVAR_EDIT_DIR, HOR_RIGH}, {IDC_ENVVAR_EDIT_LIST, HVR_BOTH},
+	{IDC_ENVVAR_EDIT_UP, VER_BOTT}, {IDC_ENVVAR_EDIT_DOWN, VER_BOTT},
+	{IDC_ENVVAR_EDIT_ADD, VER_BOTT}, {IDC_ENVVAR_EDIT_SET, VER_BOTT},
+	{IDC_ENVVAR_EDIT_DEL, VER_BOTT},  {IDOK, VER_BOTT|HOR_RIGH},
+	{IDCANCEL, VER_BOTT|HOR_RIGH}
+};
+
+EXTERN_C void EnvVarsEdit_resizeInit(HWND hDlg) 
+{
+	new (&resize2)WndResize(); 
+	resize2.init(hDlg);
+	resize2.add(hDlg, crtlLst2, 13);
+}
+
+EXTERN_C void EnvVarsEdit_resizeSize(HWND hDlg, WPARAM wParam, LPARAM lParam)
+{
+	resize2.resize(hDlg, wParam, lParam);
+}
+
+EXTERN_C void EnvVarsEdit_resizeDestroy(HWND hDlg)
+{
+	resize2.~WndResize();
 }

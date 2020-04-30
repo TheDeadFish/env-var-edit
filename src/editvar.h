@@ -15,3 +15,8 @@ EditVariableDlgProc(HWND hwndDlg,
                     UINT uMsg,
                     WPARAM wParam,
                     LPARAM lParam);
+
+
+EXTERN_C void EnvVarsEdit_resizeInit(HWND hDlg);
+EXTERN_C void EnvVarsEdit_resizeSize(HWND hDlg, WPARAM wParam, LPARAM lParam);
+EXTERN_C void EnvVarsEdit_resizeDestroy(HWND hDlg);

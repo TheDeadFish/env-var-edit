@@ -15,7 +15,17 @@ EditVariableDlgProc(HWND hwndDlg,
 
     switch (uMsg)
     {
+        case WM_SIZE:
+            EnvVarsEdit_resizeSize(hwndDlg, wParam, lParam);
+            break;
+        
+        case WM_DESTROY:
+            EnvVarsEdit_resizeDestroy(hwndDlg);
+            break;
+    
         case WM_INITDIALOG:
+            EnvVarsEdit_resizeInit(hwndDlg);
+        
             SetWindowLongPtr(hwndDlg, GWLP_USERDATA, (LONG_PTR)lParam);
             VarData = (PVARIABLE_DATA)lParam;
 
