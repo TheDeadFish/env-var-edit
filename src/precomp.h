@@ -3,7 +3,6 @@
 #include <windows.h>
 #include <tchar.h>
 #include <Commctrl.h>
-
 #include "resource.h"
 
 #define NUM_APPLETS (1)
@@ -77,6 +76,12 @@ ResourceMessageBox(
     IN UINT uType,
     IN UINT uCaption,
     IN UINT uText);
-
+    
+/* Helper functions */
+LPTSTR stringAlloc(DWORD dwLength);
+LPTSTR getDlgItemText(HWND hwndDlg, UINT idItem);
+LPTSTR getListItemText(HWND hwndDlg, UINT idItem);
+void ListBox_SetText(HWND hList, int iItem, LPTSTR str);
+void ListBox_Move(HWND hList, int iItem, BOOL down);
 
 #endif /* __CPL_SYSDM_H */
